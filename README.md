@@ -5,16 +5,18 @@
 This cli has one function which expects 2 date arguments. It calculates how many days your experiment ran for.
 The CLI is written in Python 3.8.7, with a single binary executable created via `pyinstaller`
 The python source code includes a number of unit tests which can be run before compilation of the binary.
-Alternatively, the CLI can be tested in situ using the `'-test` flag.
+Alternatively, the CLI can be tested in situ using the `-test` flag.
 
 ## Getting Started
-To use the CLI, all you need to do is add the explen executable to a location in your PATH variable. For example:
+To use the CLI, all you need to do is add the explen executable to a location in your PATH variable. For example:<br/>
 `cp dist/explen ~/../../usr/local/bin/explen`
 
 ## Usage
-`explen <experiment_start_date> <experiment_end_date> # run the main cli function`
-`explen -test # run the cli tests`
-`explen -help # view the user manual`
+```
+explen <experiment_start_date> <experiment_end_date> # run the main cli function
+explen -test # run the cli tests
+explen -help # view the user manual
+```
 
 ## Arguments
 Date arguments must be in d/m/yyyy or dd/mm/yyyy format.
@@ -26,10 +28,10 @@ The experiment cannot end on a day before it started.
 The first and last day of an experiment are never counted in the result.
 Therefore, an experiment that ends the day after it started, has a length of zero days.
 
-Examples of valid dates:
-01/01/1111
-1/01/1111
-21/5/2021
+Examples of valid dates:<br/>
+01/01/1111<br/>
+1/01/1111<br/>
+21/5/2021<br/>
 31/12/9999
 
 CLI Example
@@ -39,13 +41,13 @@ output: Length of experiment: 1 day
 ## Running using python (pre-compilation)
 
 The program has no external dependencies, so can be run from the command line as follows.
-We used python 3.8.7 in development. We think you'll be ok with 3.6 or above, but it has not been tested.
+I used python 3.8.7 for development, but think you'll probably be ok with 3.6 or above.
 
-`python3 date_counter 3/2/2020 5/2/2021`
+`python3 explen 3/2/2020 5/2/2021`
 
 ## Unit testing using python
 
-Unit testing uses external libraries, so you'll need to run
+Unit testing uses external libraries, so you'll need to run<br/>
 `pip install -r requirements-test.txt`
 It is recommended that you do this inside a virtual environment which can be setup as follows:
 
@@ -92,10 +94,11 @@ If you're running in a pyenv environment, you may need to install your python ve
 
 *more info in the [pyenv docs] (https://github.com/pyenv/pyenv/wiki#how-to-build-cpython-with---enable-shared)
 
-When the process is completed, the explen executable will have been created in a `dist` directory. Move it to a 
-directory in your shell path and you're good to go!
+When the process is completed, the explen executable will have been created in the `dist` directory.<br/>
+Move it to a directory in your shell path and you're good to go!
 
 
 ## UML Diagram
+
 
 ![](assets/uml_diagram.jpg)
