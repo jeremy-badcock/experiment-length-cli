@@ -118,7 +118,7 @@ If you're running in a pyenv environment, you may need to install your python ve
 
 *more info in the [pyenv docs](https://github.com/pyenv/pyenv/wiki#how-to-build-cpython-with---enable-shared)
 
-When the process is completed, the explen executable will have been created in a `dist` directory.<br/>
+When the process is completed, the explen executable will have been created in the `dist` directory.<br/>
 Move it to a directory in your shell path and you're good to go!
 
 ## Design
